@@ -6,16 +6,19 @@ import './index.css'
 import { Home } from './pages/Home/index.jsx'
 import { Housing } from './pages/Housing/index.jsx'
 import { About } from './pages/About/index.jsx'
+import MainContainer from './components/MainContainer/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <Router>
             <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Housing" element={<Housing />} />
-                <Route path="/About" element={<About />} />
-            </Routes>
+            <MainContainer>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/Housing" element={<Housing />} />
+                    <Route path="/About" element={<About />} />
+                </Routes>
+            </MainContainer>
         </Router>
     </React.StrictMode>
 )

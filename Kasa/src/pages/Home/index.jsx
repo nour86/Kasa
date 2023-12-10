@@ -1,3 +1,13 @@
+import cover from '../../assets/cover_1.png'
+
+import Banner from '../../components/Banner'
+
 export function Home() {
-    return <h1>Home</h1>
+    return (
+        <Banner
+            cover={cover}
+            alt="photo de falaises"
+            title="Chez Vous, Partout et Ailleurs"
+        />
+    )
 }
