@@ -6,6 +6,7 @@ import './index.css'
 import { Home } from './pages/Home/index.jsx'
 import { Housing } from './pages/Housing/index.jsx'
 import { About } from './pages/About/index.jsx'
+import { Error } from './pages/Error/index.jsx'
 import MainContainer from './components/MainContainer/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -15,8 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <MainContainer>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/Housing" element={<Housing />} />
-                    <Route path="/About" element={<About />} />
+                    <Route path="/housing/:houseId" element={<Housing />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<Error />} />
                 </Routes>
             </MainContainer>
         </Router>

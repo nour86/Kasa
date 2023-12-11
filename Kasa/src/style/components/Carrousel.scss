@@ -1,0 +1,34 @@
+.carrousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 470px;
+    position: relative;
+    border-radius: 20px;
+    & > span {
+        color: white;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    & > .banner-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    & > .arrow-left {
+        position: absolute;
+        left: 10px;
+    }
+    & > .arrow-right {
+        position: absolute;
+        right: 10px;
+    }
+}
