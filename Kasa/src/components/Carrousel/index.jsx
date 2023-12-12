@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
-import '../../style/components/Carrousel.scss'
+import './style.scss'
 import leftarrow from '../../assets/arrow_left.png'
 import righttarrow from '../../assets/arrow_right.png'
 
@@ -10,7 +10,6 @@ Carrousel.propTypes = {
 
 export function Carrousel({ pictures }) {
     const [pictureNumber, setPictureNumber] = useState(0)
-    console.log(pictureNumber)
 
     function handleNav(increment) {
         let newIndex = pictureNumber + increment

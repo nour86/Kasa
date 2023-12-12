@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import '../../style/components/Banner.scss'
+import './style.scss'
 
 Banner.propTypes = {
     cover: PropTypes.string.isRequired,

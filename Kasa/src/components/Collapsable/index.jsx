@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
-import '../../style/components/Collapsable.scss'
+import './style.scss'
 
 Collapsable.propTypes = {
     title: PropTypes.string,

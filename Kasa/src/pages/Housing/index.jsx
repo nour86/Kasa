@@ -1,19 +1,18 @@
 import { useParams } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import { Layout } from '../../utils/Layout'
 import { houseList } from '../../assets/datas/houseList'
 import { Carrousel } from '../../components/Carrousel'
 import { TagList } from '../../components/Tag'
 import { Collapsable } from '../../components/Collapsable'
-import '../../style/pages/Housing.scss'
+import './style.scss'
 
 AboutHouse.propTypes = {
     children: PropTypes.node,
 }
-
 function AboutHouse({ children }) {
     return <div className="about-house">{children}</div>
 }
-
 HouseInfos.propTypes = {
     title: PropTypes.string,
     location: PropTypes.string,
@@ -28,12 +27,10 @@ function HouseInfos({ title, location, tags }) {
         </div>
     )
 }
-
 OwnerInfos.propTypes = {
-    host: PropTypes.array,
-    rating: PropTypes.number,
+    host: PropTypes.object,
+    rating: PropTypes.string,
 }
-
 function OwnerInfos({ host, rating }) {
     return (
         <div className="owner-infos">
@@ -49,7 +46,7 @@ export function Housing() {
     console.log(house)
 
     return (
-        <>
+        <Layout>
             <Carrousel pictures={house.pictures} />
             <AboutHouse>
                 <div className="main-infos">
@@ -71,6 +68,6 @@ export function Housing() {
                     />
                 </div>
             </AboutHouse>
-        </>
+        </Layout>
     )
 }

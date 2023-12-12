@@ -1,4 +1,4 @@
-.houseGallery {
+.home-gallery {
     margin-top: 50px;
     width: 100%;
     padding: 50px;
@@ -9,7 +9,7 @@
     border-radius: 20px;
 }
 
-.houseCard {
+.house-card {
     justify-self: center;
     position: relative;
     width: 340px;
@@ -29,12 +29,12 @@
         width: 100%;
         height: 100%;
     }
-    & > figcaption {
+    &__title {
         position: absolute;
         bottom: 0px;
         width: 100%;
-        background-color: #222;
-        color: #fff;
+        background-color: rgb(255, 255, 255, 0.5);
+        color: black;
         font: italic smaller sans-serif;
         padding: 3px;
         text-align: center;

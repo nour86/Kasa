@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
-import '../../style/pages/Home.scss'
+import './style.scss'
 // export const HouseGallery () {
 //     return ()
 // }
@@ -12,12 +12,14 @@ HouseCards.propTypes = {
 export function HouseCards({ houseList }) {
     console.log(houseList)
     return (
-        <div className="houseGallery">
+        <div className="home-gallery">
             {houseList.map((house) => (
-                <figure className="houseCard" key={`article-${house.id}`}>
+                <figure className="house-card" key={`article-${house.id}`}>
                     <NavLink to={`/housing/${house.id}`}></NavLink>
                     <img src={house.cover} alt={house.title} />
-                    <figcaption>{house.title}</figcaption>
+                    <figcaption className="house-card__title">
+                        {house.title}
+                    </figcaption>
                 </figure>
             ))}
         </div>

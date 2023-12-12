@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import '../../style/pages/Housing.scss'
+import './style.scss'
 
 TagList.propTypes = {
     tags: PropTypes.array,

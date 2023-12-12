@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import '../../style/components/MainContainer.scss'
+import './style.scss'
 
 MainContainer.propTypes = {
     children: PropTypes.node,
