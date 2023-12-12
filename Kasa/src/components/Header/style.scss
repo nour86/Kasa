@@ -7,6 +7,12 @@
     align-items: center;
 }
 
-.headerLink {
+.header-link {
     padding: 30px;
+    &.active {
+        color: red;
+    }
+    &.inactive {
+        color: blue;
+    }
 }

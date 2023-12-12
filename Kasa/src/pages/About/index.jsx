@@ -1,3 +1,9 @@
+import { Layout } from '../../utils/Layout'
+
 export function About() {
-    return <h1>About</h1>
+    return (
+        <Layout>
+            <h1>about</h1>
+        </Layout>
+    )
 }
