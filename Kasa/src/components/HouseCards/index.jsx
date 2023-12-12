@@ -10,7 +10,6 @@ HouseCards.propTypes = {
 }
 
 export function HouseCards({ houseList }) {
-    console.log(houseList)
     return (
         <div className="home-gallery">
             {houseList.map((house) => (

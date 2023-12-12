@@ -11,8 +11,8 @@ Carrousel.propTypes = {
 export function Carrousel({ pictures }) {
     const [pictureNumber, setPictureNumber] = useState(0)
 
-    function handleNav(increment) {
-        let newIndex = pictureNumber + increment
+    function handleNav(direction) {
+        let newIndex = pictureNumber + direction
         newIndex < 0
             ? setPictureNumber(pictures.length - 1)
             : newIndex >= pictures.length

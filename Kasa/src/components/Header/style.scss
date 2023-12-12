@@ -10,9 +10,6 @@
 .header-link {
     padding: 30px;
     &.active {
-        color: red;
-    }
-    &.inactive {
-        color: blue;
+        text-decoration: underline;
     }
 }

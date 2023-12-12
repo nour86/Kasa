@@ -8,8 +8,15 @@
 .main-infos {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .more-infos {
     display: flex;
+}
+.owner-info {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
 }

@@ -6,7 +6,7 @@ MainContainer.propTypes = {
 }
 
 function MainContainer({ children }) {
-    return <div className="main-container">{children}</div>
+    return <main className="main-container">{children}</main>
 }
 
 export default MainContainer

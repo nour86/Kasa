@@ -5,6 +5,7 @@ import { houseList } from '../../assets/datas/houseList'
 import { Carrousel } from '../../components/Carrousel'
 import { TagList } from '../../components/Tag'
 import { Collapsable } from '../../components/Collapsable'
+import { Rating } from '../../components/Rating'
 import './style.scss'
 
 AboutHouse.propTypes = {
@@ -35,7 +36,7 @@ function OwnerInfos({ host, rating }) {
     return (
         <div className="owner-infos">
             <h1>{host.name}</h1>
-            <p>{rating}</p>
+            <Rating rating={rating} />
         </div>
     )
 }
