@@ -10,36 +10,22 @@ Collapsable.propTypes = {
 
 export function Collapsable({ content, title }) {
     const [isTextVisible, setTextVisible] = useState(false)
-    const [initialLoad, setInitialLoad] = useState(true)
 
     function handleClickOnList() {
-        if (initialLoad) {
-            setInitialLoad(false)
-        }
-        setTextVisible(!isTextVisible)
+        isTextVisible ? setTextVisible(false) : setTextVisible(true)
     }
 
     return (
-        <div
-            className={`list-container ${
-                initialLoad ? '' : isTextVisible ? 'open' : 'close'
-            }`}
-            onClick={handleClickOnList}
-        >
+        <div className={`list-container ${isTextVisible ? 'open' : 'close'}`}>
             <div className="list-header">
                 <h3>{title}</h3>
                 <img
                     src={arrow}
-                    className={`${
-                        initialLoad ? '' : isTextVisible ? 'open' : 'close'
-                    }`}
+                    className={`${isTextVisible ? 'open' : 'close'}`}
+                    onClick={() => handleClickOnList()}
                 ></img>
             </div>
-            <div
-                className={`text-list ${
-                    initialLoad ? '' : isTextVisible ? 'show' : 'hide'
-                }`}
-            >
+            <div className={`text-list ${isTextVisible ? 'show' : 'hide'}`}>
                 {typeof content === 'string' ? (
                     <p className="elements">{content}</p>
                 ) : (
