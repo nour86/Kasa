@@ -16,7 +16,7 @@ export function Collapsable({ content, title }) {
     }
 
     return (
-        <div className={`list-container ${isTextVisible ? 'open' : 'close'}`}>
+        <div className="list-container">
             <div className="list-header">
                 <h3>{title}</h3>
                 <img
