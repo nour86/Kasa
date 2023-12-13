@@ -6,11 +6,12 @@ import PropTypes from 'prop-types'
 
 Rating.propTypes = {
     rating: PropTypes.string,
+    classname: PropTypes.string,
 }
-export function Rating({ rating }) {
+export function Rating({ rating, classname }) {
     const range = [1, 2, 3, 4, 5]
     return (
-        <ul className="owner-rating">
+        <ul className={`rating ${classname}`}>
             {range.map((e) =>
                 e <= parseInt(rating) ? (
                     <li key={e}>

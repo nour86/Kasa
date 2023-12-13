@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 import './style.scss'
+import arrow from './../../assets/arrow_up.svg'
 
 Collapsable.propTypes = {
     title: PropTypes.string,
-    content: PropTypes.any,
+    content: PropTypes.string || PropTypes.array,
 }
 
 export function Collapsable({ content, title }) {
@@ -27,11 +28,12 @@ export function Collapsable({ content, title }) {
         >
             <div className="list-header">
                 <h3>{title}</h3>
-                <i
-                    className={`fa-solid fa-angle-up ${
+                <img
+                    src={arrow}
+                    className={`${
                         initialLoad ? '' : isTextVisible ? 'open' : 'close'
                     }`}
-                ></i>
+                ></img>
             </div>
             <div
                 className={`text-list ${

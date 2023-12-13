@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { Layout } from '../../utils/Layout'
-import { houseList } from '../../assets/datas/houseList'
+import houseList from '../../data/data.json'
 import { Carrousel } from '../../components/Carrousel'
 import { TagList } from '../../components/Tag'
 import { Collapsable } from '../../components/Collapsable'
@@ -17,26 +17,27 @@ function AboutHouse({ children }) {
 HouseInfos.propTypes = {
     title: PropTypes.string,
     location: PropTypes.string,
-    tags: PropTypes.array,
+    classname: PropTypes.string,
 }
-function HouseInfos({ title, location, tags }) {
+function HouseInfos({ title, location, classname }) {
     return (
-        <div className="house-infos">
+        <div className={classname}>
             <h1>{title}</h1>
             <p>{location}</p>
-            <TagList tags={tags} />
         </div>
     )
 }
 OwnerInfos.propTypes = {
     host: PropTypes.object,
-    rating: PropTypes.string,
+    classname: PropTypes.string,
 }
-function OwnerInfos({ host, rating }) {
+function OwnerInfos({ host, classname }) {
     return (
-        <div className="owner-infos">
-            <h1>{host.name}</h1>
-            <Rating rating={rating} />
+        <div className={classname}>
+            <h2>{host.name}</h2>
+            <div className="profile-pic">
+                <img src={host.picture ? host.picture : ''} />
+            </div>
         </div>
     )
 }
@@ -52,11 +53,13 @@ export function Housing() {
             <AboutHouse>
                 <div className="main-infos">
                     <HouseInfos
+                        classname="house-infos"
                         title={house.title}
                         location={house.location}
-                        tags={house.tags}
                     />
-                    <OwnerInfos host={house.host} rating={house.rating} />
+                    <TagList classname="house-tags" tags={house.tags} />
+                    <OwnerInfos classname="owner-infos" host={house.host} />
+                    <Rating classname="house-rating" rating={house.rating} />
                 </div>
                 <div className="more-infos">
                     <Collapsable

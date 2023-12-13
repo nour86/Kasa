@@ -1,8 +1,15 @@
+.tag-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
 .tag {
-    width: 115px;
+    display: inline;
     height: 25px;
+    text-align: center;
     flex-shrink: 0;
-    border-radius: 2px;
+    border-radius: 10px;
     background-color: #ff6060;
     color: white;
 }

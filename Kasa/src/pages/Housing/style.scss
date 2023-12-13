@@ -4,19 +4,39 @@
     margin: 0;
     padding: 0;
 }
-
 .main-infos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas:
+        'a a a b b'
+        'c c c d d';
     width: 100%;
+    & > .house-infos {
+        grid-area: a;
+    }
+    & > .house-tags {
+        grid-area: c;
+    }
+    & > .house-rating {
+        grid-area: d;
+    }
+    & > .owner-infos {
+        grid-area: b;
+    }
+}
+.owner-infos {
+    display: flex;
+    & .profile-pic {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+        overflow: hidden;
+        object-fit: scale-down;
+        & > img {
+            object-fit: scale-down;
+        }
+    }
 }
 
 .more-infos {
     display: flex;
-}
-.owner-info {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
 }
