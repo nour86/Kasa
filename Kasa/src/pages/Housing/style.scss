@@ -25,14 +25,18 @@
 }
 .owner-infos {
     display: flex;
+    align-items: center;
     & .profile-pic {
         width: 64px;
         height: 64px;
         border-radius: 32px;
+        display: flex;
         overflow: hidden;
+        justify-content: center;
+        align-items: center;
         object-fit: scale-down;
         & > img {
-            object-fit: scale-down;
+            width: 100%;
         }
     }
 }
