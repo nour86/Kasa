@@ -1,3 +1,5 @@
+@import '../../utils/variables/colors.scss';
+
 .banner {
     box-sizing: border-box;
     overflow: hidden;
@@ -8,13 +10,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
+    margin-bottom: 2rem;
     img {
         object-fit: fill;
-        opacity: 0.7;
+        opacity: 1;
     }
 
     h1 {
+        font-size: 3rem;
         position: absolute;
         align-self: center;
         color: white;

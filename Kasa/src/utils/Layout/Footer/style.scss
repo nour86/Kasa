@@ -1,3 +1,5 @@
+@import '../../../utils/variables/colors.scss';
+
 footer {
     display: flex;
     flex-direction: column;
@@ -5,6 +7,6 @@ footer {
     align-items: center;
     margin: 0;
     padding: 2rem;
-    background-color: black;
-    color: white;
+    background-color: $secondary-background-color;
+    color: $secondary-color;
 }

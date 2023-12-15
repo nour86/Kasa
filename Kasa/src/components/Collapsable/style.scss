@@ -1,10 +1,10 @@
+@import '../../utils/variables/colors.scss';
+
 .list-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    width: 96%;
-    padding: 0 2% 0 2%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -12,7 +12,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #ff6060;
+    background-color: $primary-color;
     padding: 0 2% 0 2%;
     border-radius: 5px;
     justify-content: space-between;
@@ -27,14 +27,13 @@
 }
 
 .text-list {
-    font-family: montserrat;
     display: none;
     width: 100%;
-    background-color: #f6f6f6;
+    background-color: $tertiary-background-color;
     padding: 1% 2% 1% 2%;
     border-radius: 5px;
     z-index: 0;
-    color: #ff6060;
+    color: $primary-color;
     font-size: 18px;
     font-weight: 400;
     &.show {

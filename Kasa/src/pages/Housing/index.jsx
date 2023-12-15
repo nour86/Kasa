@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { Layout } from '../../utils/Layout'
-import houseList from '../../data/data.json'
+import houseList from '../../data/house-list.json'
 import { Carrousel } from '../../components/Carrousel'
 import { TagList } from '../../components/Tag'
 import { Collapsable } from '../../components/Collapsable'

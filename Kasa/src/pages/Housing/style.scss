@@ -1,3 +1,5 @@
+@import '../../utils/variables/colors.scss';
+
 .about-house {
     display: flex;
     flex-direction: column;
@@ -5,6 +7,7 @@
     padding: 0;
 }
 .main-infos {
+    color: $primary-color;
     display: grid;
     grid-template-areas:
         'a a a b b'
@@ -23,9 +26,29 @@
         grid-area: b;
     }
 }
-.owner-infos {
+
+.house-infos {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    h1 {
+        line-height: 1rem;
+    }
+    p {
+        line-height: 0.5rem;
+    }
+}
+.house-rating,
+.house-tags {
+    margin-bottom: 1rem;
+}
+
+.owner-infos {
+    justify-self: end;
+    display: flex;
+    padding-top: 1rem;
+    align-items: start;
+    gap: 1rem;
     & .profile-pic {
         width: 64px;
         height: 64px;
@@ -43,4 +66,6 @@
 
 .more-infos {
     display: flex;
+    justify-content: space-between;
+    gap: 2rem;
 }

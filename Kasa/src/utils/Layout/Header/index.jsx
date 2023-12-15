@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import Logo from '../../assets/logo_header.svg'
+import Logo from '../../../assets/logo_header.svg'
 import './style.scss'
 
 function Header() {
@@ -18,7 +18,7 @@ function Header() {
                                 : 'header-link inactive'
                         }
                     >
-                        Home
+                        Acceuil
                     </NavLink>
                     <NavLink
                         to="/about"
@@ -28,7 +28,7 @@ function Header() {
                                 : 'header-link inactive'
                         }
                     >
-                        About
+                        A Propos
                     </NavLink>
                 </div>
             </nav>

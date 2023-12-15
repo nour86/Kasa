@@ -3,7 +3,7 @@ import Banner from '../../components/Banner'
 import { Layout } from '../../utils/Layout'
 import { HouseCards } from '../../components/HouseCards'
 // import { useFetch } from '../../utils/hooks/fetch'
-import houseList from '../../data/data.json'
+import houseList from '../../data/house-list.json'
 
 export function Home() {
     // const { data } = useFetch('../../../../public/data.json')
