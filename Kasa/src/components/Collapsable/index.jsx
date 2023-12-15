@@ -21,7 +21,7 @@ export function Collapsable({ content, title }) {
                 <h3>{title}</h3>
                 <img
                     src={arrow}
-                    className={`${isTextVisible ? 'open' : 'close'}`}
+                    className={`${isTextVisible ? 'open icon' : 'close icon'}`}
                     onClick={() => handleClickOnList()}
                 ></img>
             </div>
@@ -29,11 +29,11 @@ export function Collapsable({ content, title }) {
                 {typeof content === 'string' ? (
                     <p className="elements">{content}</p>
                 ) : (
-                    <div className="elements">
+                    <ul className="elements">
                         {content.map((e, index) => (
-                            <p key={index}>{e}</p>
+                            <li key={index}>{e}</li>
                         ))}
-                    </div>
+                    </ul>
                 )}
             </div>
         </div>

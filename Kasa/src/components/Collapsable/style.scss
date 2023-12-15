@@ -18,28 +18,47 @@
     justify-content: space-between;
     z-index: 1;
     color: white;
-    & .open {
-        border: 2px solid blue;
+    & .icon {
+        transition: transform 0.25s ease-in-out;
     }
-    & .close {
-        border: 2px solid red;
+    & .open {
+        transform: rotate(180deg);
+    }
+    & .open:hover,
+    .close:hover {
+        cursor: pointer;
     }
 }
 
 .text-list {
-    display: none;
     width: 100%;
-    background-color: $tertiary-background-color;
-    padding: 1% 2% 1% 2%;
+    background-color: white;
+    overflow: hidden;
     border-radius: 5px;
     z-index: 0;
     color: $primary-color;
-    font-size: 18px;
+    list-style: none;
+    font-size: 1.1rem;
     font-weight: 400;
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        max-height 0.4s ease-in-out,
+        background-color 0.4s ease-in-out,
+        opacity 0.4s ease-in-out;
     &.show {
-        display: block;
+        max-height: 500px;
+        opacity: 1;
+        background-color: $tertiary-background-color;
     }
-    &.hide {
-        display: none;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(180deg);
     }
 }
