@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 import './style.scss'
-// export const HouseGallery () {
-//     return ()
-// }
 
 HouseCards.propTypes = {
     houseList: PropTypes.array,

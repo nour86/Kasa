@@ -1,6 +1,15 @@
+@import '../../utils/variables/mixins.scss';
+
 .about-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
+    & > .list-container {
+        width: 80%;
+        @include breakpoint-max($small) {
+            width: 100%;
+        }
+    }
 }

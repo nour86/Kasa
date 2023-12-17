@@ -1,4 +1,5 @@
 @import '../../../utils/variables/colors.scss';
+@import '../../../utils/variables/mixins.scss';
 
 .navContainer {
     padding: 50px 100px 0px 100px;
@@ -7,19 +8,41 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include breakpoint-max($small) {
+        padding: 27px 20px 0 20px;
+        img {
+            width: 100%;
+        }
+    }
 }
 
-.header-link {
-    padding-left: 30px;
-    font-size: 1.5rem;
-    color: $primary-color;
-    &:hover {
-        text-shadow: 1px 1px 2px $primary-color;
+.header-links {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 57px;
+    @include breakpoint-max($small) {
+        gap: 26px;
     }
-    &.active {
-        text-decoration: underline;
-    }
-    &.inactive {
-        text-decoration: none;
+    & > a {
+        padding-left: 30px;
+        font-size: 1.5rem;
+        color: $primary-color;
+        text-align: right;
+        &:hover {
+            text-shadow: 1px 1px 2px $primary-color;
+        }
+        &.active {
+            text-decoration: underline;
+        }
+        &.inactive {
+            text-decoration: none;
+        }
+        @include breakpoint-max($small) {
+            font-size: 12px;
+            padding-left: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
     }
 }

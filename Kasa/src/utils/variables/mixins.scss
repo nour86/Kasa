@@ -1,6 +1,6 @@
-$breakpointMobile: 768px;
-$breakpointTablet: 1024px;
-$breakpointDesktop: 1224px;
+$small: 768px;
+$medium: 1024px;
+$large: 1224px;
 
 @mixin breakpoint-min($breakP) {
     @media (min-width: $breakP) {

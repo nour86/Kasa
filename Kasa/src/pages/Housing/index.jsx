@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Layout } from '../../utils/Layout'
 import houseList from '../../data/house-list.json'
@@ -45,7 +46,10 @@ function OwnerInfos({ host, classname }) {
 export function Housing() {
     const { houseId } = useParams()
     const house = houseList.find((house) => house.id === houseId)
-    console.log(house)
+    console.log('something')
+    // useEffect(() => {
+    //     console.log('something')
+    // }, [house])
 
     return (
         <Layout>

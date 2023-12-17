@@ -9,13 +9,11 @@ function Header() {
                 <NavLink to="/">
                     <img src={Logo} />
                 </NavLink>
-                <div>
+                <div className="header-links">
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
-                            isActive
-                                ? 'header-link active'
-                                : 'header-link inactive'
+                            isActive ? 'active' : 'inactive'
                         }
                     >
                         Acceuil
@@ -23,9 +21,7 @@ function Header() {
                     <NavLink
                         to="/about"
                         className={({ isActive }) =>
-                            isActive
-                                ? 'header-link active'
-                                : 'header-link inactive'
+                            isActive ? 'active' : 'inactive'
                         }
                     >
                         A Propos

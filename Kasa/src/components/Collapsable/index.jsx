@@ -5,7 +5,7 @@ import arrow from './../../assets/arrow_up.svg'
 
 Collapsable.propTypes = {
     title: PropTypes.string,
-    content: PropTypes.string || PropTypes.array,
+    content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 }
 
 export function Collapsable({ content, title }) {

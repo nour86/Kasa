@@ -9,6 +9,7 @@ Carrousel.propTypes = {
 }
 
 export function Carrousel({ pictures }) {
+    console.log('new pic?')
     const [pictureNumber, setPictureNumber] = useState(0)
 
     function handleNav(direction) {
@@ -20,7 +21,7 @@ export function Carrousel({ pictures }) {
               : setPictureNumber(newIndex)
     }
 
-    if (pictures.length == 1) {
+    if (pictures.length <= 1) {
         return (
             <div className="carrousel">
                 <img src={pictures[pictureNumber]} alt="nawak" />

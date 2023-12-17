@@ -4,14 +4,14 @@ import './style.scss'
 Banner.propTypes = {
     cover: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
-    title: PropTypes.string,
+    children: PropTypes.node,
 }
 
-function Banner({ cover, alt, title }) {
+function Banner({ cover, alt, children }) {
     return (
         <div className="banner">
             <img src={cover} alt={alt} />
-            <h1>{title}</h1>
+            {children}
         </div>
     )
 }
