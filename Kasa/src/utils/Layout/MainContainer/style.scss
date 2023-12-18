@@ -11,4 +11,7 @@
     @include breakpoint-max($small) {
         padding: 20px;
     }
+    @include breakpoint-max($medium) {
+        padding: 50px;
+    }
 }

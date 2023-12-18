@@ -15,6 +15,9 @@
     @include breakpoint-max($small) {
         height: 111px;
     }
+    @include breakpoint-max($medium) {
+        height: 166px;
+    }
 
     img {
         object-fit: fill;
