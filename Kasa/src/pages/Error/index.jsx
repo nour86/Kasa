@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom'
 import { Layout } from '../../utils/Layout'
+import './style.scss'
 
 export function Error() {
     return (
         <Layout>
-            <h1>404</h1>
-            <p>Oups, la page que vous demandez nexiste pas</p>
-            <Link className="headerLink" to="/">
-                Retour à la page dacceuil
-            </Link>
+            <div className="error">
+                <h1>404</h1>
+                <h3>Oups, la page que vous demandez nexiste pas</h3>
+                <Link className="headerLink" to="/">
+                    Retour à la page dacceuil
+                </Link>
+            </div>
         </Layout>
     )
 }

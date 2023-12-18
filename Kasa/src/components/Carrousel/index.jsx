@@ -9,7 +9,6 @@ Carrousel.propTypes = {
 }
 
 export function Carrousel({ pictures }) {
-    console.log('new pic?')
     const [pictureNumber, setPictureNumber] = useState(0)
 
     function handleNav(direction) {
@@ -36,13 +35,13 @@ export function Carrousel({ pictures }) {
                     alt="nawak"
                 />
                 <img
-                    className="arrow-left"
+                    className="arrow arrow-left"
                     src={leftarrow}
                     alt="fleche gauche"
                     onClick={() => handleNav(-1)}
                 />
                 <img
-                    className="arrow-right"
+                    className="arrow arrow-right"
                     src={righttarrow}
                     alt="fleche droite"
                     onClick={() => handleNav(1)}

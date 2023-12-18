@@ -1,0 +1,25 @@
+@import '../../utils/variables/mixins.scss';
+@import '../../utils/variables/colors.scss';
+@import '../../utils/Layout/Header/style.scss';
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $primary-color;
+    & > h1 {
+        font-size: 288px;
+        line-height: 142%;
+        font-weight: bold;
+        margin: 0;
+    }
+    & > h3 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    & a {
+        font-size: 1.12rem;
+        color: $primary-color;
+    }
+}

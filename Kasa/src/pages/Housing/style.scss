@@ -1,4 +1,5 @@
 @import '../../utils/variables/colors.scss';
+@import '../../utils/variables/mixins.scss';
 
 .about-house {
     display: flex;
@@ -9,10 +10,18 @@
 .main-infos {
     color: $primary-color;
     display: grid;
+    align-items: center;
     grid-template-areas:
         'a a a b b'
         'c c c d d';
     width: 100%;
+
+    @include breakpoint-max($small) {
+        grid-template-areas:
+            'a a'
+            'c c'
+            'd b';
+    }
     & > .house-infos {
         grid-area: a;
     }
@@ -27,28 +36,31 @@
     }
 }
 
-.house-infos {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
-    h1 {
-        line-height: 1rem;
+.house-rating {
+    justify-self: flex-end;
+    @include breakpoint-max($small) {
+        justify-self: flex-start;
     }
-    p {
-        line-height: 0.5rem;
-    }
-}
-.house-rating,
-.house-tags {
-    margin-bottom: 1rem;
 }
 
 .owner-infos {
     justify-self: end;
     display: flex;
-    padding-top: 1rem;
-    align-items: start;
+    margin-top: 1rem;
+    align-items: center;
     gap: 1rem;
+    & h2 {
+        text-align: end;
+        font-size: 1.2rem;
+        width: 93px;
+        // align-self: right;
+        @include breakpoint-max($small) {
+            font-size: 0.75rem;
+        }
+        @include breakpoint-max($medium) {
+            font-size: 1rem;
+        }
+    }
     & .profile-pic {
         width: 64px;
         height: 64px;
@@ -61,11 +73,25 @@
         & > img {
             width: 100%;
         }
+        @include breakpoint-max($small) {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+        }
+        @include breakpoint-max($medium) {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+        }
     }
 }
 
 .more-infos {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    @include breakpoint-max($small) {
+        flex-direction: column;
+    }
 }

@@ -1,4 +1,5 @@
 @import '../../../utils/variables/colors.scss';
+@import '../../../utils/variables/mixins.scss';
 
 footer {
     display: flex;
@@ -9,4 +10,10 @@ footer {
     padding: 2rem;
     background-color: $secondary-background-color;
     color: $secondary-color;
+    > br {
+        display: none;
+        @include breakpoint-max($medium) {
+            display: block;
+        }
+    }
 }

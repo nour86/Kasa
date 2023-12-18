@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
-import { useEffect } from 'react'
+import Error from '../Error'
+// import { Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { Layout } from '../../utils/Layout'
 import houseList from '../../data/house-list.json'
@@ -8,6 +9,7 @@ import { TagList } from '../../components/Tag'
 import { Collapsable } from '../../components/Collapsable'
 import { Rating } from '../../components/Rating'
 import './style.scss'
+import { useEffect, useState } from 'react'
 
 AboutHouse.propTypes = {
     children: PropTypes.node,
@@ -44,38 +46,54 @@ function OwnerInfos({ host, classname }) {
 }
 
 export function Housing() {
+    // const [house, setHouse] = useState('')
     const { houseId } = useParams()
-    const house = houseList.find((house) => house.id === houseId)
-    console.log('something')
+    console.log(houseId)
+    const house = houseList.find((house) => house.id == houseId)
+
     // useEffect(() => {
-    //     console.log('something')
-    // }, [house])
+    //     const appt = houseList.find((house) => house.id == houseId)
+    //     setHouse(appt)
+    // }, [])
+    // console.log(house)
 
     return (
-        <Layout>
-            <Carrousel pictures={house.pictures} />
-            <AboutHouse>
-                <div className="main-infos">
-                    <HouseInfos
-                        classname="house-infos"
-                        title={house.title}
-                        location={house.location}
-                    />
-                    <TagList classname="house-tags" tags={house.tags} />
-                    <OwnerInfos classname="owner-infos" host={house.host} />
-                    <Rating classname="house-rating" rating={house.rating} />
-                </div>
-                <div className="more-infos">
-                    <Collapsable
-                        title="Description"
-                        content={house.description}
-                    />
-                    <Collapsable
-                        title="Equipements"
-                        content={house.equipments}
-                    />
-                </div>
-            </AboutHouse>
-        </Layout>
+        <>
+            {!house ? (
+                <Error />
+            ) : (
+                <Layout>
+                    <Carrousel pictures={house.pictures} />
+                    <AboutHouse>
+                        <div className="main-infos">
+                            <HouseInfos
+                                classname="house-infos"
+                                title={house.title}
+                                location={house.location}
+                            />
+                            <TagList classname="house-tags" tags={house.tags} />
+                            <OwnerInfos
+                                classname="owner-infos"
+                                host={house.host}
+                            />
+                            <Rating
+                                classname="house-rating"
+                                rating={house.rating}
+                            />
+                        </div>
+                        <div className="more-infos">
+                            <Collapsable
+                                title="Description"
+                                content={house.description}
+                            />
+                            <Collapsable
+                                title="Equipements"
+                                content={house.equipments}
+                            />
+                        </div>
+                    </AboutHouse>
+                </Layout>
+            )}
+        </>
     )
 }
