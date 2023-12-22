@@ -5,7 +5,7 @@ import { Housing } from '../../pages/Housing/index.jsx'
 import { About } from '../../pages/About/index.jsx'
 import { Error } from '../../pages/Error/index.jsx'
 
-export function AppRoutes() {
+export function App() {
     return (
         <Router>
             <Routes>

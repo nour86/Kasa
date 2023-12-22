@@ -46,7 +46,7 @@
     transition:
         max-height 0.4s ease-in-out,
         background-color 0.4s ease-in-out,
-        opacity 0.4s ease-in-out;
+        opacity 0.4s linear;
     &.show {
         max-height: 500px;
         opacity: 1;

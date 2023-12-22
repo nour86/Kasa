@@ -1,9 +1,7 @@
 import { useParams } from 'react-router-dom'
 import Error from '../Error'
-// import { Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { Layout } from '../../utils/Layout'
-import houseList from '../../data/house-list.json'
 import { Carrousel } from '../../components/Carrousel'
 import { TagList } from '../../components/Tag'
 import { Collapsable } from '../../components/Collapsable'
@@ -48,11 +46,13 @@ function OwnerInfos({ host, classname }) {
 export function Housing() {
     const [house, setHouse] = useState(null)
     const { houseId } = useParams()
+    let houseList = window.localStorage.getItem('houses')
+    houseList = JSON.parse(houseList)
 
     useEffect(() => {
-        const appt = houseList.find((house) => house.id == houseId)
-        setHouse(appt)
-    }, [houseId])
+        const thisHouse = houseList.find((house) => house.id == houseId)
+        setHouse(thisHouse)
+    }, [])
 
     return (
         <>

@@ -20,36 +20,37 @@ export function Carrousel({ pictures }) {
               : setPictureNumber(newIndex)
     }
 
-    if (pictures.length <= 1) {
-        return (
-            <div className="carrousel">
-                <img src={pictures[pictureNumber]} alt="nawak" />
-            </div>
-        )
-    } else {
-        return (
-            <div className="carrousel">
+    return (
+        <div className="carrousel">
+            {pictures.length <= 1 ? (
                 <img
-                    className="banner-img"
                     src={pictures[pictureNumber]}
-                    alt="nawak"
+                    alt="photo du bien à louer"
                 />
-                <img
-                    className="arrow arrow-left"
-                    src={leftarrow}
-                    alt="fleche gauche"
-                    onClick={() => handleNav(-1)}
-                />
-                <img
-                    className="arrow arrow-right"
-                    src={righttarrow}
-                    alt="fleche droite"
-                    onClick={() => handleNav(1)}
-                />
-                <span>
-                    {pictureNumber + 1}/{pictures.length}
-                </span>
-            </div>
-        )
-    }
+            ) : (
+                <>
+                    <img
+                        className="banner-img"
+                        src={pictures[pictureNumber]}
+                        alt="photo du bien à louer"
+                    />
+                    <img
+                        className="arrow arrow-left"
+                        src={leftarrow}
+                        alt="fleche gauche"
+                        onClick={() => handleNav(-1)}
+                    />
+                    <img
+                        className="arrow arrow-right"
+                        src={righttarrow}
+                        alt="fleche droite"
+                        onClick={() => handleNav(1)}
+                    />
+                    <span>
+                        {pictureNumber + 1}/{pictures.length}
+                    </span>
+                </>
+            )}
+        </div>
+    )
 }

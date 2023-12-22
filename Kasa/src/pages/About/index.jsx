@@ -3,7 +3,7 @@ import { Layout } from '../../utils/Layout'
 import cover from '../../assets/cover_2.png'
 import Banner from '../../components/Banner'
 import { Collapsable } from '../../components/Collapsable'
-import about from '../../data/about.json'
+import about from '../../../public/about.json'
 import './style.scss'
 
 AboutContainer.propTypes = {

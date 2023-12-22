@@ -15,7 +15,7 @@
     @include breakpoint-max($small) {
         height: 111px;
     }
-    @include breakpoint-max($medium) {
+    @include breakpoint-min-max($small, $medium) {
         height: 166px;
     }
 

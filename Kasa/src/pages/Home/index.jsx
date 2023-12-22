@@ -11,11 +11,17 @@ export function Home() {
 
     useEffect(() => {
         setLoading(true)
+        let houses = window.localStorage.getItem('houses')
+        houses == null && fetchData()
+        houses = JSON.parse(houses)
+        setData(houses)
+
         async function fetchData() {
             try {
                 const response = await fetch('./public/data.json')
                 const data = await response.json()
-                setData(data)
+                const listOfHouses = JSON.stringify(data)
+                window.localStorage.setItem('houses', listOfHouses)
             } catch (err) {
                 console.log(err)
                 setError(true)

@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import './utils/fonts/Montserrat/Montserrat-Regular.ttf'
 
-import { AppRoutes } from './utils/routes/index.jsx'
+import { App } from './utils/routes/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <AppRoutes />
+        <App />
     </React.StrictMode>
 )
