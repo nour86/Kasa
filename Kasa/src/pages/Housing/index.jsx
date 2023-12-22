@@ -46,16 +46,13 @@ function OwnerInfos({ host, classname }) {
 }
 
 export function Housing() {
-    // const [house, setHouse] = useState('')
+    const [house, setHouse] = useState(null)
     const { houseId } = useParams()
-    console.log(houseId)
-    const house = houseList.find((house) => house.id == houseId)
 
-    // useEffect(() => {
-    //     const appt = houseList.find((house) => house.id == houseId)
-    //     setHouse(appt)
-    // }, [])
-    // console.log(house)
+    useEffect(() => {
+        const appt = houseList.find((house) => house.id == houseId)
+        setHouse(appt)
+    }, [houseId])
 
     return (
         <>
