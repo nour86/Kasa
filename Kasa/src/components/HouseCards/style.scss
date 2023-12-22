@@ -60,4 +60,16 @@
         z-index: 1;
         background: linear-gradient(to bottom, transparent 0%, black 100%);
     }
+
+    scale: 0.8;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 0px 300px;
+    @keyframes fade-in {
+        to {
+            scale: 1;
+            opacity: 1;
+        }
+    }
 }
