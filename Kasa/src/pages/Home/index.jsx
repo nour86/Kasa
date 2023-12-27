@@ -10,11 +10,12 @@ export function Home() {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        setLoading(true)
         let houses = window.localStorage.getItem('houses')
-        houses == null && fetchData()
+        houses == null &&
+            fetchData().then((houses = window.localStorage.getItem('houses')))
         houses = JSON.parse(houses)
         setData(houses)
+        setLoading(false)
 
         async function fetchData() {
             try {
@@ -25,11 +26,8 @@ export function Home() {
             } catch (err) {
                 console.log(err)
                 setError(true)
-            } finally {
-                setLoading(false)
             }
         }
-        fetchData()
     }, [])
 
     return (

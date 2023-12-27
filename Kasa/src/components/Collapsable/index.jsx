@@ -12,7 +12,7 @@ export function Collapsable({ content, title }) {
     const [isTextVisible, setTextVisible] = useState(false)
 
     function handleClickOnList() {
-        isTextVisible ? setTextVisible(false) : setTextVisible(true)
+        setTextVisible(!isTextVisible)
     }
 
     return (
@@ -31,7 +31,7 @@ export function Collapsable({ content, title }) {
                 ) : (
                     <ul className="elements">
                         {content.map((e, index) => (
-                            <li key={index}>{e}</li>
+                            <li key={`${e}-${index}`}>{e}</li>
                         ))}
                     </ul>
                 )}

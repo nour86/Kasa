@@ -56,12 +56,3 @@
         list-style-type: none;
     }
 }
-
-@keyframes rotate {
-    0% {
-        transform: rotate(90deg);
-    }
-    100% {
-        transform: rotate(180deg);
-    }
-}
