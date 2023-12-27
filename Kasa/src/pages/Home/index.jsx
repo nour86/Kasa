@@ -43,7 +43,7 @@ export function Home() {
                     <Banner cover={cover} alt="photo de falaises">
                         <h1>
                             Chez Vous,
-                            <br className="ismobile" /> Partout et Ailleurs
+                            <br className="ismobile" /> partout et ailleurs
                         </h1>
                     </Banner>
                     <HouseCards houseList={data} />

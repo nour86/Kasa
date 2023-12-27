@@ -37,7 +37,6 @@
     border-radius: 5px;
     z-index: 0;
     color: $primary-color;
-    list-style: none;
     font-size: 1.1rem;
     font-weight: 400;
     padding: 0 1rem;
@@ -51,6 +50,10 @@
         max-height: 500px;
         opacity: 1;
         background-color: $tertiary-background-color;
+    }
+    ul {
+        padding-inline-start: 0px;
+        list-style-type: none;
     }
 }
 

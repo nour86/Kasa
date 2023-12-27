@@ -10,9 +10,9 @@ footer {
     padding: 2rem;
     background-color: $secondary-background-color;
     color: $secondary-color;
-    > br {
+    br {
         display: none;
-        @include breakpoint-max($medium) {
+        @include breakpoint-max($small) {
             display: block;
         }
     }

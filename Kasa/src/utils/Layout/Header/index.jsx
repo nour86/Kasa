@@ -16,7 +16,7 @@ function Header() {
                             isActive ? 'active' : 'inactive'
                         }
                     >
-                        Acceuil
+                        Accueil
                     </NavLink>
                     <NavLink
                         to="/about"

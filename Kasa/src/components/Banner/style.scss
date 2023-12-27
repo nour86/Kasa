@@ -14,9 +14,11 @@
     margin-bottom: 2rem;
     @include breakpoint-max($small) {
         height: 111px;
+        border-radius: 10px;
     }
     @include breakpoint-min-max($small, $medium) {
         height: 166px;
+        border-radius: 20px;
     }
 
     img {
@@ -32,6 +34,9 @@
         color: white;
         @include breakpoint-max($small) {
             font-size: 1.5rem;
+        }
+        @include breakpoint-min-max($small, $medium) {
+            font-size: 2.5rem;
         }
 
         br {
