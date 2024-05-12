@@ -1,4 +1,4 @@
-# Kasa (Correction pour jury OpenClassrooms)
+# Kasa
 ### OpenClassrooms P8 - Créez une application web de location immobilière avec React
 
 Scénario :
