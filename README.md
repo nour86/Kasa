@@ -34,7 +34,7 @@ Démarrer le projet React et développer l’ensemble de l’application, les co
 **Autorisés:** HTML / CSS / JavaScript / SASS / React / Yarn
 
 ## Tester le projet
-Ce projet a été démarré avec Create React App.
+Ce projet a été démarré avec Vite
 
 Clonez le projet
 ```terminal
